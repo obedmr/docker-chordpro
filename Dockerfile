@@ -1,7 +1,7 @@
 FROM archlinux
 MAINTAINER obed.n.munoz@gmail.com
 
-RUN pacman -Syu --noconfirm perl-cpanplus make gcc ttf-ubuntu-font-family python-pip
+RUN pacman -Syu --noconfirm perl-cpanplus make gcc ttf-ubuntu-font-family python-pip go git
 RUN pip install awscli
 RUN /usr/bin/vendor_perl/cpanp "s conf prereqs 1; s save"
 RUN /usr/bin/vendor_perl/cpanp install chordpro
